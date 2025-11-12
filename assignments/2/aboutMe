@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Abraham Kao - Student Portfolio</title>
+    </head>
+    <body>
+        <header id="Top">
+            <h1>Abraham Kao</h1>
+            <p>Computer Science Student</p>
+        </header>
+
+        <main>
+            <section id="about">.   //id allows you to link to this part of the website
+                <h2>About Me</h2>
+                <p>Hello! I'm Abraham, a Junior studying Computer Science at San Francisco State University</p>
+                <p>Some of my hobbies include archery and video games</p>
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                
+                <h3>Programming Languages</h3>
+                <ul>
+                <li>JavaScript</li>
+                <li>C++</li>
+                </ul>
+                
+
+
+                <h3>Tools/Technologies</h3>
+                <ul>
+                <li>Terminal</li>
+                <li>git/github</li>
+                <li>VS code</li>
+                <li>Intellij Java</li>
+                </ul>
+
+            </section>
+            <section id="Recent Projects">
+                <h2>Recent Projects</h2>
+                
+            </section>
+        </main>
+    </body>
+</html>
