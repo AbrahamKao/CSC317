@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript Calculator</title>
+  <link rel="stylesheet" href="styles/calculator.css" />
+</head>
+<body>
+  <main class="calc" aria-label="Calculator">
+    <div class="calc__display" id="display" aria-live="polite" aria-atomic="true">0</div>
+
+    <!-- Top row (AC, +/-, %, ÷) -->
+    <button class="btn btn--util" data-action="clear" aria-label="All Clear (AC)">AC</button>
+    <button class="btn btn--util" data-action="sign" aria-label="Toggle Sign">+/-</button>
+    <button class="btn btn--util" data-action="percent" aria-label="Percent">%</button>
+    <button class="btn btn--op"   data-action="operator" data-operator="÷" aria-label="Divide">÷</button>
+
+    <!-- Numbers 7–9 + × -->
+    <button class="btn" data-action="digit" data-digit="7">7</button>
+    <button class="btn" data-action="digit" data-digit="8">8</button>
+    <button class="btn" data-action="digit" data-digit="9">9</button>
+    <button class="btn btn--op" data-action="operator" data-operator="×" aria-label="Multiply">×</button>
+
+    <!-- Numbers 4–6 + − -->
+    <button class="btn" data-action="digit" data-digit="4">4</button>
+    <button class="btn" data-action="digit" data-digit="5">5</button>
+    <button class="btn" data-action="digit" data-digit="6">6</button>
+    <button class="btn btn--op" data-action="operator" data-operator="−" aria-label="Subtract">−</button>
+
+    <!-- Numbers 1–3 + + -->
+    <button class="btn" data-action="digit" data-digit="1">1</button>
+    <button class="btn" data-action="digit" data-digit="2">2</button>
+    <button class="btn" data-action="digit" data-digit="3">3</button>
+    <button class="btn btn--op" data-action="operator" data-operator="+" aria-label="Add">+</button>
+
+    <!-- 0 (spans 2 cols), ., = -->
+    <button class="btn btn--zero" data-action="digit" data-digit="0">0</button>
+    <button class="btn" data-action="decimal">.</button>
+    <button class="btn btn--op" data-action="equals" aria-label="Equals">=</button>
+  </main>
+
+  <script src="scripts/calculator.js"></script>
+</body>
+</html>
