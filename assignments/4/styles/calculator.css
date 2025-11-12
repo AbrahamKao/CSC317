@@ -3,7 +3,7 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: #0f1013;
+  background: #000; 
   color: #e8eaed;
   display: grid;
   place-items: center;
@@ -17,8 +17,8 @@ body {
   gap: 10px;
   padding: 16px;
   border-radius: 24px;
-  background: linear-gradient(180deg, #15171c, #0f1115);
-  box-shadow: 0 20px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.03);
+  background: linear-gradient(180deg, #111827, #0f172a); /* deep navy tone */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .calc__display {
@@ -29,43 +29,62 @@ body {
   align-items: end;
   justify-content: flex-end;
   font-size: clamp(28px, 6vw, 48px);
+  font-weight: 600;
   line-height: 1;
   overflow: hidden;
-  background: #1a1d23;
+  color: #00f7ff;
+  background: #0a0f18;
   border-radius: 16px;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+  text-shadow: 0 0 8px rgba(0, 247, 255, 0.4);
 }
 
 .btn {
-  border: 0;
+  border: none;
   border-radius: 18px;
   font-size: 22px;
-  color: #e8eaed;
-  background: #2a2f3a;
+  font-weight: 600;
   cursor: pointer;
-  transition: transform .04s ease, filter .15s ease, background .15s ease;
+  transition: transform 0.05s ease, filter 0.15s ease, background 0.15s ease;
   display: grid;
   place-items: center;
   user-select: none;
 }
 
-.btn:focus-visible {
-  outline: 2px solid #7aa2ff;
-  outline-offset: 2px;
+.btn[data-action="digit"] {
+  background: #ffffff;
+  color: #111827;
 }
 
-.btn:hover   { filter: brightness(1.08); }
-.btn:active  { transform: translateY(1px) scale(.99); }
+.btn[data-action="digit"]:hover {
+  background: #f3f4f6;
+}
+
+.btn[data-action="digit"]:active {
+  transform: scale(0.98);
+}
 
 .btn--util {
-  background: #5a6374;
-  color: #111419;
+  background: #3b4a60;
+  color: #e2e8f0;
 }
 
+.btn--util:hover {
+  background: #4b5a73;
+}
+
+
 .btn--op {
-  background: #f39b12;
-  color: #111;
-  font-weight: 700;
+  background: #1e3a8a;
+  color: #e0e7ff;
+}
+
+.btn--op:hover {
+  background: #1d4ed8;
+}
+
+.btn--op:active {
+  transform: scale(0.97);
 }
 
 .btn--zero {
@@ -74,11 +93,28 @@ body {
   padding-left: 22px;
 }
 
+.btn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
 @media (max-width: 380px) {
-  .calc { grid-auto-rows: 64px; gap: 8px; }
-  .calc__display { height: 80px; }
+  .calc {
+    grid-auto-rows: 64px;
+    gap: 8px;
+  }
+  .calc__display {
+    height: 80px;
+    font-size: 32px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn { transition: none; }
+  .btn {
+    transition: none;
+  }
 }
