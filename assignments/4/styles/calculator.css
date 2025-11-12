@@ -118,3 +118,15 @@ body {
     transition: none;
   }
 }
+
+.back-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #0b1220;
+  color: #e0e7ff;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.06);
+}
+.back-link:hover { filter: brightness(1.1); }
+.back-link:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
